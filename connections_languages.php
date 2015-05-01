@@ -13,7 +13,7 @@
  * Plugin Name:       Connections Languages
  * Plugin URI:        http://connections-pro.com
  * Description:       An extension for the Connections plugin which adds a metabox for languages.
- * Version:           1.0
+ * Version:           1.0.1
  * Author:            Steven A. Zahm
  * Author URI:        http://connections-pro.com
  * License:           GPL-2.0+
@@ -36,17 +36,9 @@ if ( ! class_exists('Connections_Languages') ) {
 			self::defineConstants();
 			self::loadDependencies();
 
-			// register_activation_hook( CNIL_BASE_NAME . '/connections_languages.php', array( __CLASS__, 'activate' ) );
-			// register_deactivation_hook( CNIL_BASE_NAME . '/connections_languages.php', array( __CLASS__, 'deactivate' ) );
-
-			/*
-			 * Load translation. NOTE: This should be ran on the init action hook because
-			 * function calls for translatable strings, like __() or _e(), execute before
-			 * the language files are loaded will not be loaded.
-			 *
-			 * NOTE: Any portion of the plugin w/ translatable strings should be bound to the init action hook or later.
-			 */
-			add_action( 'init', array( __CLASS__ , 'loadTextdomain' ) );
+			// This should run on the `plugins_loaded` action hook. Since the extension loads on the
+			// `plugins_loaded action hook, call immediately.
+			self::loadTextdomain();
 
 			// Register the metabox and fields.
 			add_action( 'cn_metabox', array( __CLASS__, 'registerMetabox') );
@@ -72,7 +64,7 @@ if ( ! class_exists('Connections_Languages') ) {
 		 */
 		private static function defineConstants() {
 
-			define( 'CNLANG_CURRENT_VERSION', '1.0.2' );
+			define( 'CNLANG_CURRENT_VERSION', '1.0.1' );
 			define( 'CNLANG_DIR_NAME', plugin_basename( dirname( __FILE__ ) ) );
 			define( 'CNLANG_BASE_NAME', plugin_basename( __FILE__ ) );
 			define( 'CNLANG_PATH', plugin_dir_path( __FILE__ ) );
@@ -212,7 +204,7 @@ if ( ! class_exists('Connections_Languages') ) {
 		public static function registerMetabox() {
 
 			$atts = array(
-				'name'     => 'Languages',
+				'name'     => __( 'Languages', 'connections_languages' ),
 				'id'       => 'languages',
 				'title'    => __( 'Languages', 'connections_languages' ),
 				'context'  => 'side',
@@ -241,7 +233,7 @@ if ( ! class_exists('Connections_Languages') ) {
 		 */
 		public static function settingsOption( $blocks ) {
 
-			$blocks['languages'] = 'Languages';
+			$blocks['languages'] = __( 'Languages', 'connections_languages' );
 
 			return $blocks;
 		}

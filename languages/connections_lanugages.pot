@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Connections Languages\n"
+"POT-Creation-Date: 2015-05-01 18:06-0500\n"
+"PO-Revision-Date: 2015-05-01 18:06-0500\n"
+"Last-Translator: Steven A. Zahm <helpdesk@connections-pro.com>\n"
+"Language-Team: Steven A. Zahm <helpdesk@connections-pro.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: connections_languages.php:151
+msgid "Arabic"
+msgstr ""
+
+#: connections_languages.php:152
+msgid "Bengali"
+msgstr ""
+
+#: connections_languages.php:153
+msgid "Chinese"
+msgstr ""
+
+#: connections_languages.php:154
+msgid "English"
+msgstr ""
+
+#: connections_languages.php:155
+msgid "French"
+msgstr ""
+
+#: connections_languages.php:156
+msgid "German"
+msgstr ""
+
+#: connections_languages.php:157
+msgid "Hindi"
+msgstr ""
+
+#: connections_languages.php:158
+msgid "Italian"
+msgstr ""
+
+#: connections_languages.php:159
+msgid "Japanese"
+msgstr ""
+
+#: connections_languages.php:160
+msgid "Korean"
+msgstr ""
+
+#: connections_languages.php:161
+msgid "Portuguese"
+msgstr ""
+
+#: connections_languages.php:162
+msgid "Russian"
+msgstr ""
+
+#: connections_languages.php:163
+msgid "Spanish"
+msgstr ""
+
+#: connections_languages.php:164
+msgid "Tai-Kadai"
+msgstr ""
+
+#: connections_languages.php:165
+msgid "Vietnamese"
+msgstr ""
+
+#: connections_languages.php:207 connections_languages.php:209
+#: connections_languages.php:236 includes/class.widgets.php:20
+#: includes/class.widgets.php:25 includes/class.widgets.php:59
+msgid "Languages"
+msgstr ""
+
+#: includes/class.widgets.php:67
+msgid "Title:"
+msgstr ""
+
+#: includes/class.widgets.php:111
+msgid "Education Level"
+msgstr ""
