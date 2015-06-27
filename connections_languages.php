@@ -13,7 +13,7 @@
  * Plugin Name:       Connections Languages
  * Plugin URI:        http://connections-pro.com
  * Description:       An extension for the Connections plugin which adds a metabox for languages.
- * Version:           1.0.1
+ * Version:           1.1
  * Author:            Steven A. Zahm
  * Author URI:        http://connections-pro.com
  * License:           GPL-2.0+
@@ -64,7 +64,7 @@ if ( ! class_exists('Connections_Languages') ) {
 		 */
 		private static function defineConstants() {
 
-			define( 'CNLANG_CURRENT_VERSION', '1.0.1' );
+			define( 'CNLANG_CURRENT_VERSION', '1.1' );
 			define( 'CNLANG_DIR_NAME', plugin_basename( dirname( __FILE__ ) ) );
 			define( 'CNLANG_BASE_NAME', plugin_basename( __FILE__ ) );
 			define( 'CNLANG_PATH', plugin_dir_path( __FILE__ ) );
@@ -152,14 +152,17 @@ if ( ! class_exists('Connections_Languages') ) {
 				'ben' => __( 'Bengali', 'connections_languages'),
 				'chi' => __( 'Chinese', 'connections_languages'),
 				'eng' => __( 'English', 'connections_languages'),
+				'fil' => __( 'Filipino', 'connections_languages'),
 				'fra' => __( 'French', 'connections_languages'),
 				'ger' => __( 'German', 'connections_languages'),
 				'hin' => __( 'Hindi', 'connections_languages'),
+				'ind' => __( 'Indonesian', 'connections_languages'),
 				'ita' => __( 'Italian', 'connections_languages'),
 				'jpn' => __( 'Japanese', 'connections_languages'),
 				'kor' => __( 'Korean', 'connections_languages'),
 				'por' => __( 'Portuguese', 'connections_languages'),
 				'rus' => __( 'Russian', 'connections_languages'),
+				'slv' => __( 'Slovenian', 'connections_languages'),
 				'spa' => __( 'Spanish', 'connections_languages'),
 				'tai' => __( 'Tai-Kadai', 'connections_languages'),
 				'vie' => __( 'Vietnamese', 'connections_languages'),
@@ -262,7 +265,7 @@ if ( ! class_exists('Connections_Languages') ) {
 
 				if ( $language = self::language( $code ) ) {
 
-					printf( '<li class="cn-language cn-%1$s">%2$s</li>', esc_attr( $code ), esc_attr( $language ) );
+					printf( '<li class="cn-language cn-%1$s">%2$s</li>', esc_attr( $code ), esc_html( $language ) );
 				}
 
 			}
